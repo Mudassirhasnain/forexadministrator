@@ -1,7 +1,8 @@
 import { neon } from '@neondatabase/serverless';
 import { drizzle } from 'drizzle-orm/neon-http';
 import * as schema from './schema';
-import { INITIAL_INSTRUMENTS, INITIAL_BLOG_POSTS } from './seedData';
+import { INITIAL_INSTRUMENTS, INITIAL_BLOG_POSTS, INITIAL_EVENTS } from './seedData';
+import { computeInstrumentRelevance } from '../lib/calendar/relevanceEngine';
 import bcrypt from 'bcryptjs';
 import * as dotenv from 'dotenv';
 
@@ -36,6 +37,44 @@ async function runSeed() {
     await db.insert(schema.blogPosts).values(post).onConflictDoNothing();
   }
   console.log(`[Seed] Seeded ${INITIAL_BLOG_POSTS.length} research dossiers.`);
+
+  console.log('[Seed] Seeding baseline economic calendar events...');
+  const allInstruments = await db.select().from(schema.instruments);
+  for (const evt of INITIAL_EVENTS) {
+    await db
+      .insert(schema.economicEvents)
+      .values({
+        ...evt,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        lastSyncedAt: new Date(),
+      })
+      .onConflictDoNothing();
+
+    // Map relevance
+    for (const inst of allInstruments) {
+      const rel = computeInstrumentRelevance(inst, {
+        eventName: evt.eventName,
+        currency: evt.currency,
+        countryCode: evt.countryCode,
+        impact: evt.impact as 'high' | 'medium' | 'low',
+      });
+      if (rel.isRelevant) {
+        await db
+          .insert(schema.instrumentEventMap)
+          .values({
+            id: `map_${inst.id}_${evt.id}`,
+            instrumentId: inst.id,
+            economicEventId: evt.id,
+            relevanceScore: rel.score,
+            relevanceReason: rel.reason,
+            createdAt: new Date(),
+          })
+          .onConflictDoNothing();
+      }
+    }
+  }
+  console.log(`[Seed] Seeded ${INITIAL_EVENTS.length} economic calendar events with instrument mappings.`);
 
   // Admin user provisioning via environment variables only (no hardcoded credentials)
   const adminEmail = process.env.ADMIN_SEED_EMAIL;
