@@ -3,7 +3,7 @@ import './globals.css';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { finnhubClient } from '@/lib/finnhub/client';
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from "@vercel/analytics/next"; 
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://forexadministrator.vercel.app'),
