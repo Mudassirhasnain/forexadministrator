@@ -1,0 +1,18 @@
+<svg width="240" height="48" viewBox="0 0 240 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Brand Icon -->
+  <g transform="translate(4, 4)">
+    <rect width="40" height="40" rx="10" fill="#0F172A" stroke="#1E293B" stroke-width="1.5"/>
+    <!-- Gold / Amber Accent Precision Geometry -->
+    <path d="M12 28L18 20L23 24L28 14" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="28" cy="14" r="2.5" fill="#F59E0B"/>
+    <!-- Crosshair ticks -->
+    <line x1="20" y1="8" x2="20" y2="11" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="20" y1="29" x2="20" y2="32" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="8" y1="20" x2="11" y2="20" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="29" y1="20" x2="32" y2="20" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="56" y="24" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" letter-spacing="-0.02em">FOREX</text>
+  <text x="114" y="24" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="400" letter-spacing="-0.01em">ADMINISTRATOR</text>
+  <text x="56" y="37" fill="#64748B" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600" letter-spacing="0.1em">INSTITUTIONAL ECONOMIC CALENDAR</text>
+</svg>

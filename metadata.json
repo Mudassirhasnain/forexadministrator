@@ -1,0 +1,6 @@
+{
+  "name": "Forex Administrator",
+  "description": "Production-quality economic calendar and trader intelligence platform built for modern financial markets.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
