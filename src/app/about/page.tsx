@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { Target, Layers, Cpu, Compass, CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'About the Platform | Institutional Market Intelligence',
+  title: 'About the Platform | ForexAdministrator',
   description:
     'Forex Administrator was engineered to eradicate calendar clutter and provide professional traders with deterministic macroeconomic event mapping.',
   alternates: {
