@@ -5,7 +5,7 @@ import { Target, Layers, Cpu, Compass, CheckCircle2 } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'About the Platform | ForexAdministrator',
   description:
-    'Forex Administrator was engineered to eradicate calendar clutter and provide professional traders with deterministic macroeconomic event mapping.',
+    'Forex Administrator was designed to create new use cases of Forex Calendars. The older versions had less options of the events taking place',
   alternates: {
     canonical: 'https://forexadministrator.vercel.app/about',
   },
