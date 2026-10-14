@@ -2,8 +2,8 @@ import React from 'react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Forex Administrator',
-  description: 'Privacy standards and client data governance policy for Forex Administrator.',
+  title: 'Privacy Policy | ForexAdministrator',
+  description: 'Client Data Protection Standards and Governance Policy for ForexAdministrator.',
   alternates: { canonical: 'https://forexadministrator.vercel.app/privacy' },
 };
 
