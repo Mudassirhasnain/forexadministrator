@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Forex Administrator | Institutional Economic Calendar for Traders',
+    title: 'Forex Administrator: Institutional Economic Calendar for Traders',
     description:
       'High-velocity economic calendar, multi-instrument macroeconomic event mapping, and real-time release updates built specifically for modern financial traders.',
     images: ['/icon.svg'],
