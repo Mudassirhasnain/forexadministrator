@@ -8,7 +8,7 @@ import { Analytics } from "@vercel/analytics/next";
 export const metadata: Metadata = {
   metadataBase: new URL('https://forexadministrator.vercel.app'),
   title: {
-    default: 'Forex Administrator | Institutional Economic Calendar for Traders',
+    default: 'Forex Administrator: Institutional Economic Calendar for Traders',
     template: '%s | Forex Administrator',
   },
   description:
